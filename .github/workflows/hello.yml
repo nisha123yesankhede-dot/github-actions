@@ -1,22 +1,16 @@
-# this is the name of workflow
 name: hello workflow
 
-on:
- push:
-    branches: [main]
-# these are jobs inside the workflow
+"on":
+  push:
+    branches:
+      - main
 jobs:
-
-#this is the name of the job
-  greet:     
+  greet:
     run on: ubuntu-latest
-  #this the lists
-  steps:
-   -name: say hello to users
-    run: "hello dosto"
+  steps: |-
+    -name:say hello to users run:"hello dosto"
 
-
-   -name: say hello to username
-     run: hello $user
+    -name:say hello to username run:hello $user
+me: hello workflow
 
      
